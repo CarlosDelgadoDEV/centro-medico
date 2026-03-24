@@ -2,106 +2,984 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Centro Médico Alas en Balvanera, CABA - Consultorios y Atención Profesional</title>
-    
-    <meta name="description" content="Centro Médico en Balvanera, CABA. Consultorios médicos en alquiler y atención personalizada." />
-    <meta property="og:title" content="Centro Médico en Buenos Aires - Consultorios en CABA | Centro Médico Alas" />
+    <meta name="description" content="Centro Médico en Balvanera, CABA. Consultorios médicos en alquiler y atención personalizada con profesionales matriculados. Solicita turno ya." />
     <meta property="og:type" content="website" />
+    <meta property="og:title" content="Centro Médico en Buenos Aires - Consultorios en CABA | Centro Médico Alas" />
+    <meta property="og:description" content="Centro Médico Alas: consultorios en CABA, atención médica profesional en Balvanera. Turnos online y WhatsApp para pacientes de Buenos Aires." />
     <meta property="og:url" content="https://tusitio.com" />
     <meta property="og:image" content="https://tusitio.com/imagenes/img1.jpg.jfif" />
-    
+    <meta property="og:site_name" content="Centro Médico Alas" />
+    <meta property="og:locale" content="es_AR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Centro Médico Alas - Consultorios en Buenos Aires" />
+    <meta name="twitter:description" content="Centro Médico en Balvanera, CABA. Turnos en línea, WhatsApp y profesionales matriculados certificados." />
+    <meta name="twitter:image" content="https://tusitio.com/imagenes/img1.jpg.jfif" />
     <link rel="canonical" href="https://tusitio.com" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0a3d62" />
+    <meta name="author" content="Centro Médico Alas" />
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "MedicalBusiness",
       "name": "Centro Médico Alas",
+      "image": "https://tusitio.com/imagenes/logo.jpg",
+      "telephone": "+54 9 11 3599 8023",
+      "email": "imecosalud@yahoo.com.ar",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "Alsina 310, Balvanera",
         "addressLocality": "Buenos Aires",
-        "addressRegion": "CABA"
+        "addressRegion": "CABA",
+        "postalCode": "1093",
+        "addressCountry": "AR"
       },
-      "telephone": "+54 9 11 3599 8023"
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -34.6000252,
+        "longitude": -58.4047361
+      },
+      "url": "https://tusitio.com",
+      "areaServed": {
+        "@type": "AdministrativeArea",
+        "name": "Buenos Aires"
+      },
+      "serviceArea": {
+        "@type": "Place",
+        "name": "Balvanera, CABA, Buenos Aires"
+      },
+      "priceRange": "$$",
+      "sameAs": [
+        "https://www.facebook.com/profile.php?id=100071272326204&locale=es_LA",
+        "https://www.instagram.com/centromedico.alas",
+        "https://wa.me/5491135998023"
+      ],
+      "openingHoursSpecification": [
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "17:00" },
+        { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" }
+      ],
+      "medicalSpecialty": "GeneralPractice",
+      "currenciesAccepted": "ARS",
+      "paymentAccepted": "Cash, Credit Card"
     }
     </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://tusitio.com"},
+        {"@type": "ListItem", "position": 2, "name": "Servicios", "item": "https://tusitio.com/#servicios"},
+        {"@type": "ListItem", "position": 3, "name": "Contacto", "item": "https://tusitio.com/#contacto"}
+      ]
+    }
+    </script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER Y NAVEGACIÓN */
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0a3d62;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            background: #0a3d62;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background: #083050;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(10, 61, 98, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0a3d62 0%, #1b6ba8 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+            display: flex;
+            justify-content: space-between;
+            align-items: stretch;
+            min-height: 600px;
+        }
+
+        .hero-left, .hero-right {
+            width: 22%;
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+            min-width: 150px;
+        }
+
+        .hero-center {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .carousel-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+
+        .carousel-img.active {
+            opacity: 1;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        /* FLOATING WHATSAPP BUTTON */
+        .floating-whatsapp {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(37, 211, 102, 0.4);
+            transition: all 0.3s;
+            z-index: 999;
+            text-decoration: none;
+            color: white;
+            font-size: 28px;
+        }
+
+        .floating-whatsapp:hover {
+            transform: scale(1.1) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(37, 211, 102, 0.6);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            background: #25D366;
+            color: white;
+            padding: 14px 30px;
+            text-decoration: none;
+            border-radius: 8px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .btn:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #0a3d62;
+        }
+
+        .btn-secondary:hover {
+            background: #f0f0f0;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 60px 20px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0a3d62;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* SERVICIOS */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .card-icon {
+            font-size: 48px;
+            color: #0a3d62;
+            margin-bottom: 20px;
+        }
+
+        .card h3 {
+            color: #0a3d62;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* ABOUT SECTION */
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-content h3 {
+            color: #0a3d62;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .about-content ul {
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .about-content li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-content li:before {
+            content: "✓";
+            color: #25D366;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        /* CONTACT */
+        .contact-section {
+            background: linear-gradient(135deg, #0a3d62 0%, #1b6ba8 100%);
+            color: white;
+            padding: 60px 20px;
+        }
+
+        .contact-info-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a3d62;
+            color: white;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #25D366;
+        }
+
+        /* TRUST INDICATORS */
+        .trust-indicators {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .trust-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+
+        .trust-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .trust-item-icon {
+            font-size: 42px;
+            color: #0a3d62;
+            margin-bottom: 15px;
+        }
+
+        .trust-item h3 {
+            color: #0a3d62;
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .trust-item p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* TESTIMONIALS */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            border-left: 4px solid #25D366;
+            transition: all 0.3s;
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #0a3d62;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+            margin-right: 15px;
+        }
+
+        .testimonial-info h4 {
+            color: #0a3d62;
+            margin-bottom: 3px;
+            font-size: 16px;
+        }
+
+        .testimonial-info p {
+            color: #999;
+            font-size: 13px;
+        }
+
+        .testimonial-stars {
+            color: #FFD700;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        .testimonial-text {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        /* AUDIENCE SEPARATION */
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .audience-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .audience-card h3 {
+            color: #0a3d62;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .audience-card p {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* NUEVAS SECCIONES INSTITUCIONALES */
+        .experience-section h2,
+        .facilities-section h2,
+        .diagnosis-section h2 {
+            font-weight: 700;
+        }
+
+        .experience-section .container > div > div,
+        .diagnosis-section .container > div > div {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .experience-section .container > div > div > div,
+        .diagnosis-section .container > div > div > div {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            min-width: 200px;
+            text-align: center;
+        }
+
+        .facilities-section .container > div > div {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .facilities-section .container > div > div > div {
+            text-align: center;
+        }
+
+        .facilities-section .container > div > div > div i {
+            font-size: 3em;
+            color: #0a3d62;
+            margin-bottom: 20px;
+        }
+
+        .facilities-section .container > div > div > div h3 {
+            color: #0a3d62;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .facilities-section .container > div > div > div ul {
+            text-align: left;
+            color: #666;
+            list-style: none;
+            padding: 0;
+            line-height: 1.8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 15px;
+            }
+
+            nav .container {
+                padding: 10px 15px;
+            }
+
+            nav .logo img {
+                height: 120px;
+            }
+
+            nav ul {
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .hero {
+                flex-direction: column;
+                padding: 30px 15px;
+                min-height: auto;
+                text-align: center;
+            }
+
+            .hero-left, .hero-right {
+                width: 100%;
+                height: 200px;
+                margin-bottom: 15px;
+            }
+
+            .hero-center {
+                order: 2;
+            }
+
+            .hero h1 {
+                font-size: 28px;
+                margin-bottom: 10px;
+            }
+
+            .hero p {
+                font-size: 16px;
+                margin-bottom: 15px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .btn {
+                width: 100%;
+                padding: 12px 20px;
+                font-size: 16px;
+                justify-content: center;
+            }
+
+            section {
+                padding: 40px 15px;
+            }
+
+            section h2 {
+                font-size: 28px;
+                margin-bottom: 30px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .card {
+                padding: 30px 20px;
+            }
+
+            .card-icon {
+                font-size: 40px;
+            }
+
+            .card h3 {
+                font-size: 18px;
+            }
+
+            .trust-indicators {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .trust-item {
+                padding: 25px;
+            }
+
+            .trust-item-icon {
+                font-size: 36px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .about-content h3 {
+                font-size: 20px;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .audience-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .audience-card {
+                padding: 30px 20px;
+            }
+
+            .floating-whatsapp {
+                bottom: 20px;
+                right: 20px;
+                width: 50px;
+                height: 50px;
+                font-size: 24px;
+            }
+
+            /* NUEVAS SECCIONES RESPONSIVE */
+            .experience-section,
+            .facilities-section,
+            .diagnosis-section {
+                padding: 40px 15px;
+            }
+
+            .experience-section h2,
+            .facilities-section h2,
+            .diagnosis-section h2 {
+                font-size: 2em;
+                margin-bottom: 30px;
+            }
+
+            .experience-section .container > div > div,
+            .diagnosis-section .container > div > div {
+                gap: 15px;
+            }
+
+            .experience-section .container > div > div > div,
+            .diagnosis-section .container > div > div > div {
+                min-width: 150px;
+                padding: 15px;
+            }
+
+            .facilities-section .container > div > div {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .facilities-section .container > div > div > div i {
+                font-size: 2.5em;
+                margin-bottom: 15px;
+            }
+
+            .facilities-section .container > div > div > div h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 24px;
+            }
+
+            .hero p {
+                font-size: 14px;
+            }
+
+            .btn {
+                font-size: 14px;
+                padding: 10px 15px;
+            }
+
+            section h2 {
+                font-size: 24px;
+            }
+
+            .card h3 {
+                font-size: 16px;
+            }
+
+            .trust-item h3 {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 <body>
-
-    <nav>
-        <div class="container">
-            <div class="logo">
-                <img src="imagenes/logo.jpg" alt="Logo Centro Médico Alas" class="logo-img">
+    <header>
+        <nav>
+            <div class="container">
+                <div class="logo">
+                    <img src="imagenes/logo.jpg" alt="Centro Médico Alas logo consultorios en Balvanera CABA" style="height: 160px; width: auto;" loading="lazy">
+                </div>
+                <ul>
+                    <li><a href="#inicio" aria-label="Ir a inicio del sitio">Inicio</a></li>
+                    <li><a href="#servicios" aria-label="Ver servicios médicos ofrecidos">Servicios</a></li>
+                    <li><a href="#noticias" aria-label="Leer noticias y artículos médicos">Noticias Médicas</a></li>
+                    <li><a href="quienes-somos.html" aria-label="Conocer al equipo del Centro Médico">Quiénes Somos</a></li>
+                    <li><a href="contactos.html" aria-label="Formulario de contacto y ubicación">Contacto</a></li>
+                </ul>
             </div>
-            <ul>
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-                <li><a href="contactos.html">Contacto</a></li>
-            </ul>
-        </div>
-    </nav>
+        </nav>
 
-    <header class="hero" id="inicio">
-        <div class="hero-side hero-left">
-            <img src="imagenes/img1.jpg.jfif" class="carousel-img active" alt="Consultorio">
-            <img src="imagenes/img2.jpg.jfif" class="carousel-img" alt="Equipo médico">
-        </div>
-        
-        <div class="hero-center">
-            <h1>Centro Médico Alas</h1>
-            <p class="hero-subtitle">Atención médica rápida en Balvanera</p>
-            <p>Para pacientes: turnos simples. Para médicos: alquiler de consultorios.</p>
-            <div class="hero-buttons">
-                <a href="https://clansis.com.ar/centro_medico_alas" class="btn"><i class="fas fa-calendar-check"></i> Turno Online</a>
-                <a href="https://wa.me/5491135998023" class="btn btn-secondary"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="hero" id="inicio">
+            <div class="hero-left" role="img" aria-label="Galería de instalaciones médicas profesionales">
+                <img src="imagenes/img1.jpg.jfif" class="carousel-img active" alt="Consultorio moderno Centro Médico Alas Balvanera CABA" loading="lazy">
+                <img src="imagenes/img2.jpg.jfif" class="carousel-img" alt="Equipo médico profesional consultorios Buenos Aires" loading="lazy">
+                <img src="imagenes/img3.jpg.jfif" class="carousel-img" alt="Atención médica personalizada profesionales Balvanera" loading="lazy">
+                <img src="imagenes/img6.jpg.jfif" class="carousel-img" alt="Médicos certificados atendiendo pacientes CABA" loading="lazy">
             </div>
-        </div>
-
-        <div class="hero-side hero-right">
-            <img src="imagenes/img3.jpg.jfif" class="carousel-img active" alt="Recepción">
-            <img src="imagenes/img6.jpg.jfif" class="carousel-img" alt="Instalaciones">
+            <div class="hero-center">
+                <h1>Centro Médico Alas</h1>
+                <p style="font-size: 22px; font-weight: 600; margin-bottom: 10px;">Atención médica rápida en Balvanera</p>
+                <p style="font-size: 16px; margin-bottom: 20px;">Para pacientes: turnos simples y profesionales certificados.<br>Para médicos: consultorios en alquiler con pacientes garantizados.</p>
+                <p style="font-size: 14px; color: #ccc;"><strong>📍 Alsina 310, Balvanera, CABA</strong> · <strong>📞 (011) 4963-3434</strong></p>
+                <div class="hero-buttons">
+                    <a href="https://clansis.com.ar/centro_medico_alas" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno médico en línea en Centro Médico Alas">
+                        <i class="fas fa-calendar-check"></i> Solicitar Turno
+                    </a>
+                    <a href="https://wa.me/5491135998023" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Contactar directamente por WhatsApp">
+                        <i class="fab fa-whatsapp"></i> WhatsApp
+                    </a>
+                </div>
+                <p style="font-size: 14px; margin-top: 15px;"><a href="#profesionales" style="color: #25D366; text-decoration: none; font-weight: bold;">¿Sos profesional de la salud? Trabajá con nosotros →</a></p>
+            </div>
+            <div class="hero-right" role="img" aria-label="Instalaciones y espacios del Centro Médico">
+                <img src="imagenes/img1.jpg.jfif" class="carousel-img active" alt="Recepción centro médico Alas Balvanera CABA profesional" loading="lazy">
+                <img src="imagenes/img2.jpg.jfif" class="carousel-img" alt="Consultorios médicos en alquiler Buenos Aires CABA" loading="lazy">
+                <img src="imagenes/img3.jpg.jfif" class="carousel-img" alt="Sala de espera confortable centro médico Balvanera" loading="lazy">
+                <img src="imagenes/img6.jpg.jfif" class="carousel-img" alt="Atención médica profesional integral Balvanera" loading="lazy">
+            </div>
         </div>
     </header>
 
     <main>
-        <section id="servicios" class="container">
-            <h2>Especialidades y Servicios</h2>
-            <div class="services-grid">
-                <div class="card">
-                    <i class="fas fa-stethoscope card-icon"></i>
-                    <h3>Especialidades</h3>
-                    <p>Consultas particulares y obras sociales.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-flask card-icon"></i>
-                    <h3>Laboratorio</h3>
-                    <p>Análisis clínicos con tecnología de vanguardia.</p>
-                </div>
-                <div class="card">
-                    <i class="fas fa-building card-icon"></i>
-                    <h3>Para Profesionales</h3>
-                    <p>Alquiler de consultorios equipados.</p>
+        <section id="servicios">
+            <div class="container">
+                <h2>Especialidades médicas y servicios en Centro Médico Alas Buenos Aires</h2>
+                <p>Centro de atención médica integral en CABA y Balvanera. Consultas generales, diagnósticos por imágenes, laboratorio clínico y alquiler de consultorios profesionales equipados.</p>
+                <div class="services-grid">
+                    <a href="especialidades.html" style="text-decoration: none; color: inherit;">
+                        <div class="card" style="cursor: pointer;">
+                            <div class="card-icon"><i class="fas fa-stethoscope"></i></div>
+                            <h3>Especialidades Médicas</h3>
+                            <ul style="text-align: left; color: #666; font-size: 14px; list-style: none; padding: 0;">
+                                <li>✓ Consultas particulares</li>
+                                <li>✓ Obras sociales y prepagas</li>
+                                <li>✓ Médicos especializados</li>
+                                <li>✓ Atención integral</li>
+                            </ul>
+                        </div>
+                    </a>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-flask"></i></div>
+                        <h3>Laboratorio</h3>
+                        <p>Análisis clínicos con tecnología de vanguardia para diagnósticos precisos.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-microscope"></i></div>
+                        <h3>Estudios Médicos</h3>
+                        <p>Estudios complementarios con equipamiento moderno para diagnósticos certeros.</p>
+                    </div>
+                    <div class="card">
+                        <div class="card-icon"><i class="fas fa-x-ray"></i></div>
+                        <h3>Diagnóstico por Imágenes</h3>
+                        <p>Convenio con centro de toma y procesamiento de Imágenes Médicas como Rayos X, Resonancias Magnéticas, Tomografías, Electroencefalogramas, Videos endoscopias y más.</p>
+                    </div>
+                    <a href="profesionales.html" style="text-decoration: none; color: inherit;">
+                        <div class="card" style="cursor: pointer;">
+                            <div class="card-icon"><i class="fas fa-building"></i></div>
+                            <h3>Servicios para Profesionales</h3>
+                            <p>Alquiler de consultorios modernos y equipados para profesionales de la medicina.</p>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="experience">
+        <section id="profesionales" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 60px 20px;">
             <div class="container">
-                <h2>Más de 16 años de experiencia</h2>
-                <p>Trayectoria brindando salud en CABA.</p>
+                <h2 style="text-align: center; margin-bottom: 50px; color: #0a3d62;">¿Buscás atención médica o sos profesional de la salud?</h2>
+                <div class="audience-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px;">
+                    <div class="audience-card" style="background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; border-left: 4px solid #25D366;">
+                        <div style="font-size: 48px; color: #25D366; margin-bottom: 20px;"><i class="fas fa-user-md"></i></div>
+                        <h3 style="color: #0a3d62; margin-bottom: 15px;">Atención médica en Balvanera</h3>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Turnos rápidos y accesibles con profesionales matriculados. Atención personalizada, precios convenientes y horarios extendidos para tu comodidad.</p>
+                        <a href="https://clansis.com.ar/centro_medico_alas" class="btn" target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para pacientes" style="display: inline-block; margin-top: 15px;">Solicitar Turno</a>
+                    </div>
+                    <div class="audience-card" style="background: white; padding: 40px 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); text-align: center; border-left: 4px solid #0a3d62;">
+                        <div style="font-size: 48px; color: #0a3d62; margin-bottom: 20px;"><i class="fas fa-building"></i></div>
+                        <h3 style="color: #0a3d62; margin-bottom: 15px;">Espacio para profesionales de la salud</h3>
+                        <p style="color: #666; margin-bottom: 20px; line-height: 1.6;">Alquiler de consultorios equipados en institución funcionando. Atendé pacientes del centro y generá ingresos adicionales con turnos garantizados.</p>
+                        <a href="https://wa.me/5491135998023" class="btn btn-secondary" target="_blank" rel="noopener noreferrer" aria-label="Contactar para alquiler de consultorios" style="display: inline-block; margin-top: 15px;">Trabajá con Nosotros</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience-section" style="padding: 60px 20px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
+            <div class="container">
+                <h2 style="text-align: center; color: #0a3d62; margin-bottom: 40px; font-size: 2.5em;">Más de 16 años de experiencia</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <p style="font-size: 18px; color: #333; line-height: 1.6; margin-bottom: 30px;">
+                        Centro Médico Alas cuenta con más de 16 años de trayectoria en el cuidado de la salud de nuestros pacientes.
+                        Nuestra experiencia nos permite ofrecer atención médica de calidad, respaldada por profesionales altamente capacitados
+                        y tecnología de vanguardia.
+                    </p>
+                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); min-width: 200px;">
+                            <i class="fas fa-award" style="font-size: 2em; color: #0a3d62; margin-bottom: 10px;"></i>
+                            <h4 style="color: #0a3d62; margin: 0;">Excelencia Médica</h4>
+                            <p style="color: #666; margin: 5px 0 0 0;">Compromiso con la calidad</p>
+                        </div>
+                        <div style="background: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); min-width: 200px;">
+                            <i class="fas fa-users" style="font-size: 2em; color: #0a3d62; margin-bottom: 10px;"></i>
+                            <h4 style="color: #0a3d62; margin: 0;">Atención Humana</h4>
+                            <p style="color: #666; margin: 5px 0 0 0;">Pacientes que confían</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <a href="https://wa.me/5491135998023" class="floating-whatsapp" target="_blank">
+    <a href="https://wa.me/5491135998023" class="floating-whatsapp" target="_blank" rel="noopener noreferrer" aria-label="Chatear por WhatsApp con Centro Médico Alas">
         <i class="fab fa-whatsapp"></i>
     </a>
 
-    <script src="script.js"></script>
+    <script>
+        // Lógica simple para el carrusel de imágenes
+        const carousels = document.querySelectorAll('.hero-left, .hero-right');
+        carousels.forEach(carousel => {
+            const imgs = carousel.querySelectorAll('.carousel-img');
+            let current = 0;
+            setInterval(() => {
+                imgs[current].classList.remove('active');
+                current = (current + 1) % imgs.length;
+                imgs[current].classList.add('active');
+            }, 3000);
+        });
+    </script>
 </body>
 </html>
