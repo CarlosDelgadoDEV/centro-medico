@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiénes Somos - Centro Médico Alas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER Y NAVEGACIÓN */
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0a3d62;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            background: #0a3d62;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background: #083050;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(10, 61, 98, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* CONTENIDO PRINCIPAL */
+        .about-section {
+            padding: 80px 20px;
+            background: white;
+            margin: 20px auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .about-section h1 {
+            text-align: center;
+            color: #0a3d62;
+            margin-bottom: 40px;
+            font-size: 2.5em;
+        }
+
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .about-text p {
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+
+        .about-images {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-width: 300px;
+        }
+
+        .about-images img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .team-section {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+
+        .team-section h2 {
+            text-align: center;
+            color: #0a3d62;
+            margin-bottom: 40px;
+            font-size: 2em;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .team-member {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .team-member h3 {
+            color: #0a3d62;
+            margin-bottom: 10px;
+        }
+
+        .team-member p {
+            color: #666;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a3d62;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-section h1 {
+                font-size: 2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav>
+    <div class="container">
+        <div class="logo">
+            <img src="imagenes/logo.jpg" alt="Centro Médico Alas" style="height: 160px; width: auto;">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#noticias">Noticias Médicas</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- CONTENIDO PRINCIPAL -->
+<section class="about-section">
+    <div class="container">
+        <h1>Quiénes Somos</h1>
+        <div class="about-content">
+            <div class="about-text">
+                <p>El Centro Médico Alas es un centro de salud con atención primaria ambulatoria y actividad médica multidisciplinaria ubicado en San Luis 2740, a metros de Av. Pueyrredón y Córdoba, en un punto neurálgico de la Capital Federal, con acceso a numerosas líneas de transporte y la convergencia de los subtes B y D. Se encuentra próximo a la Facultad de Medicina, al Hospital San Martín, Clínicas y numerosos centros de diagnóstico y tratamiento.</p>
+                <p>Al ingresar a la recepción general, se sentirá en un ambiente profesional cálido, amplio, confortable y personalizado acorde a sus necesidades. Las recepcionistas, se encargarán de informarlo, aclarar todas sus dudas y recepcionar los turnos de los pacientes.</p>
+                <p>El horario de atención es de lunes a viernes de 8 a 20 hs.</p>
+                <p>Desde 2010, el Centro Médico Alas ha estado al servicio de la comunidad argentina, acumulando 16 años de experiencia dedicada a brindar atención médica de calidad y compromiso con la salud de nuestros pacientes. Nuestro legado se basa en la confianza, la excelencia profesional y el cuidado continuo que hemos proporcionado generación tras generación.</p>
+            </div>
+            <div class="about-images">
+                <img src="https://www.centromedicoalas.com.ar/images/stories/quienes/01.jpg" alt="Centro Médico Alas - Imagen 1">
+                <img src="https://www.centromedicoalas.com.ar/images/stories/quienes/02.jpg" alt="Centro Médico Alas - Imagen 2">
+                <img src="https://www.centromedicoalas.com.ar/images/stories/quienes/03.jpg" alt="Centro Médico Alas - Imagen 3">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- DIRECCIÓN MÉDICA -->
+<section class="team-section">
+    <div class="container">
+        <h2>Dirección Médica</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <h3>Director Médico</h3>
+                <p>Dr. Varela Oscar Alberto</p>
+            </div>
+            <div class="team-member">
+                <h3>Subdirectora-Coordinadora Médica</h3>
+                <p>Dra. Ballesteros Virginia Victoria</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Centro Médico Alas. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>

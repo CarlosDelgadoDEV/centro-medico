@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Especialidades Médicas - Centro Médico Alas</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER Y NAVEGACIÓN */
+        nav {
+            background: white;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #0a3d62;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            background: #0a3d62;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            transition: all 0.3s;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            background: #083050;
+            transform: translateY(-1px);
+            box-shadow: 0 3px 10px rgba(10, 61, 98, 0.3);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(135deg, #0a3d62 0%, #1b6ba8 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.95;
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 60px 20px;
+        }
+
+        section h2 {
+            font-size: 36px;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #0a3d62;
+        }
+
+        section p {
+            font-size: 16px;
+            line-height: 1.8;
+        }
+
+        /* ESPECIALIDADES GRID */
+        .especialidades-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .especialidad-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            text-align: center;
+            cursor: pointer;
+        }
+
+        .especialidad-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        .especialidad-icon {
+            font-size: 48px;
+            color: #0a3d62;
+            margin-bottom: 20px;
+        }
+
+        .especialidad-card h3 {
+            color: #0a3d62;
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .especialidad-card p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #0a3d62;
+            color: white;
+            padding: 50px 20px 20px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h4 {
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .footer-section ul {
+            list-style: none;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: white;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-links a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+            color: white;
+            transition: background 0.3s;
+        }
+
+        .social-links a:hover {
+            background: #25D366;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.2);
+            padding-top: 20px;
+            color: #ccc;
+            font-size: 14px;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #0a3d62;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-bottom: 30px;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: #1b6ba8;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav ul {
+                gap: 15px;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            section h2 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- NAVEGACIÓN -->
+<nav>
+    <div class="container">
+        <div class="logo">
+            <img src="imagenes/logo.jpg" alt="Centro Médico Alas" style="height: 160px; width: auto;">
+        </div>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li>
+            <li><a href="index.html#noticias">Noticias Médicas</a></li>
+            <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+            <li><a href="index.html#contacto">Contacto</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<div class="hero">
+    <div class="container">
+        <h1>Especialidades Médicas</h1>
+        <p>Contamos con profesionales especializados en diversas áreas de la medicina</p>
+    </div>
+</div>
+
+<!-- VOLVER -->
+<section>
+    <div class="container">
+        <a href="index.html" class="back-button">
+            <i class="fas fa-arrow-left"></i> Volver al inicio
+        </a>
+    </div>
+</section>
+
+<!-- ESPECIALIDADES -->
+<section>
+    <div class="container">
+        <h2>Nuestras Especialidades</h2>
+        <div class="especialidades-grid">
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-stethoscope"></i></div>
+                <h3>Clínica Médica</h3>
+                <p>Atención médica general integral con profesionales capacitados.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-child"></i></div>
+                <h3>Pediatría</h3>
+                <p>Cuidado especializado para la salud de los más pequeños.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-female"></i></div>
+                <h3>Ginecología</h3>
+                <p>Salud integral de la mujer y obstetricia.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-male"></i></div>
+                <h3>Urología</h3>
+                <p>Especialidad médica del aparato urinario y sistema reproductor masculino.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-tooth"></i></div>
+                <h3>Odontología</h3>
+                <p>Cuidado dental completo y tratamientos especializados.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-lungs"></i></div>
+                <h3>Neumonología</h3>
+                <p>Diagnóstico y tratamiento de enfermedades respiratorias.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-heartbeat"></i></div>
+                <h3>Cardiología</h3>
+                <p>Especialidad del corazón y sistema cardiovascular.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-bone"></i></div>
+                <h3>Traumatología</h3>
+                <p>Tratamiento de lesiones y enfermedades del aparato locomotor.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-allergies"></i></div>
+                <h3>Dermatología</h3>
+                <p>Cuidado de la piel, cabello y uñas.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-ultrasound"></i></div>
+                <h3>Ecografías</h3>
+                <p>Estudios por imágenes ecográficas diagnósticas.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-syringe"></i></div>
+                <h3>Flebología</h3>
+                <p>Tratamiento de enfermedades venosas y circulatorias.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-apple-alt"></i></div>
+                <h3>Nutrición</h3>
+                <p>Asesoramiento nutricional y dietético personalizado.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-magic"></i></div>
+                <h3>Cirugía Estética</h3>
+                <p>Procedimientos estéticos y reconstructivos.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-brain"></i></div>
+                <h3>Psicología</h3>
+                <p>Salud mental y apoyo psicológico profesional.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-eye"></i></div>
+                <h3>Oftalmología</h3>
+                <p>Cuidado de la visión y salud ocular.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-shield-alt"></i></div>
+                <h3>Alergia</h3>
+                <p>Diagnóstico y tratamiento de alergias e inmunología.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-tint"></i></div>
+                <h3>Hematología</h3>
+                <p>Especialidad de la sangre y órganos hematopoyéticos.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-ear"></i></div>
+                <h3>Otorrinolaringología</h3>
+                <p>Salud de oído, nariz y garganta.</p>
+            </div>
+            <div class="especialidad-card">
+                <div class="especialidad-icon"><i class="fas fa-ribbon"></i></div>
+                <h3>Oncología Clínica</h3>
+                <p>Diagnóstico y tratamiento del cáncer.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Centro Médico Alas</h4>
+                <p>Especialistas en diversas áreas médicas para tu bienestar.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="index.html#servicios">Servicios</a></li>
+                    <li><a href="index.html#noticias">Noticias Médicas</a></li>
+                    <li><a href="index.html#nosotros">Quiénes Somos</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contacto Directo</h4>
+                <ul>
+                    <li><a href="tel:01149633434">Teléfono: (011) 4963-3434</a></li>
+                    <li><a href="https://wa.me/5491135998023" target="_blank">WhatsApp: +54 9 11 3599-8023</a></li>
+                    <li><a href="mailto:imecosalud@yahoo.com.ar">Email: imecosalud@yahoo.com.ar</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Centro Médico Alas. Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
