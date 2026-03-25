@@ -115,7 +115,7 @@
             gap: 30px;
         }
 
-        .especialidad-card {
+        a.especialidad-card {
             background: white;
             padding: 40px 30px;
             border-radius: 12px;
@@ -123,11 +123,19 @@
             transition: all 0.3s;
             text-align: center;
             cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
 
-        .especialidad-card:hover {
+        a.especialidad-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 12px 24px rgba(0,0,0,0.12);
+        }
+
+        a.especialidad-card:focus-visible {
+            outline: 3px solid #25D366;
+            outline-offset: 3px;
         }
 
         .especialidad-icon {
@@ -145,6 +153,32 @@
         .especialidad-card p {
             color: #666;
             font-size: 14px;
+        }
+
+        .especialidad-card .especialidad-tagline {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .especialidad-card .especialidad-tagline li {
+            color: #666;
+            font-size: 14px;
+            line-height: 1.5;
+            padding-left: 1.15em;
+            position: relative;
+            display: inline-block;
+            text-align: left;
+            max-width: 22rem;
+        }
+
+        .especialidad-card .especialidad-tagline li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #0a3d62;
+            font-weight: bold;
         }
 
         /* FOOTER */
@@ -261,7 +295,7 @@
             <li><a href="index.html#servicios">Servicios</a></li>
             <li><a href="index.html#noticias">Noticias Médicas</a></li>
             <li><a href="quienes-somos.html">Quiénes Somos</a></li>
-            <li><a href="index.html#contacto">Contacto</a></li>
+            <li><a href="contactos.html">Contacto</a></li>
         </ul>
     </div>
 </nav>
@@ -288,101 +322,101 @@
     <div class="container">
         <h2>Nuestras Especialidades</h2>
         <div class="especialidades-grid">
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-stethoscope"></i></div>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Cl%C3%ADnica%20M%C3%A9dica%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Clínica Médica por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-stethoscope"></i></div>
                 <h3>Clínica Médica</h3>
-                <p>Atención médica general integral con profesionales capacitados.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-child"></i></div>
+                <ul class="especialidad-tagline"><li>Consultas generales y seguimiento integral.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Pediatr%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Pediatría por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-child"></i></div>
                 <h3>Pediatría</h3>
-                <p>Cuidado especializado para la salud de los más pequeños.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-female"></i></div>
+                <ul class="especialidad-tagline"><li>Salud infantil con enfoque preventivo.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Ginecolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Ginecología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-female"></i></div>
                 <h3>Ginecología</h3>
-                <p>Salud integral de la mujer y obstetricia.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-male"></i></div>
+                <ul class="especialidad-tagline"><li>Salud de la mujer y obstetricia.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Urolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Urología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-male"></i></div>
                 <h3>Urología</h3>
-                <p>Especialidad médica del aparato urinario y sistema reproductor masculino.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-tooth"></i></div>
+                <ul class="especialidad-tagline"><li>Aparato urinario y salud masculina.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Odontolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Odontología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-tooth"></i></div>
                 <h3>Odontología</h3>
-                <p>Cuidado dental completo y tratamientos especializados.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-lungs"></i></div>
+                <ul class="especialidad-tagline"><li>Diagnóstico y tratamientos odontológicos.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Neumonolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Neumonología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-lungs"></i></div>
                 <h3>Neumonología</h3>
-                <p>Diagnóstico y tratamiento de enfermedades respiratorias.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-heartbeat"></i></div>
+                <ul class="especialidad-tagline"><li>Vías respiratorias y enfermedades pulmonares.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Cardiolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Cardiología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-heartbeat"></i></div>
                 <h3>Cardiología</h3>
-                <p>Especialidad del corazón y sistema cardiovascular.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-bone"></i></div>
+                <ul class="especialidad-tagline"><li>Corazón y sistema vascular.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Traumatolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Traumatología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-bone"></i></div>
                 <h3>Traumatología</h3>
-                <p>Tratamiento de lesiones y enfermedades del aparato locomotor.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-allergies"></i></div>
+                <ul class="especialidad-tagline"><li>Huesos, articulaciones y lesiones.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Dermatolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Dermatología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-allergies"></i></div>
                 <h3>Dermatología</h3>
-                <p>Cuidado de la piel, cabello y uñas.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-ultrasound"></i></div>
+                <ul class="especialidad-tagline"><li>Piel, cuero cabelludo y uñas.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Ecograf%C3%ADas%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Ecografías por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-ultrasound"></i></div>
                 <h3>Ecografías</h3>
-                <p>Estudios por imágenes ecográficas diagnósticas.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-syringe"></i></div>
+                <ul class="especialidad-tagline"><li>Estudios ecográficos orientados al diagnóstico.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Flebolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Flebología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-syringe"></i></div>
                 <h3>Flebología</h3>
-                <p>Tratamiento de enfermedades venosas y circulatorias.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-apple-alt"></i></div>
+                <ul class="especialidad-tagline"><li>Salud venosa y circulación.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Nutrici%C3%B3n%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Nutrición por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-apple-alt"></i></div>
                 <h3>Nutrición</h3>
-                <p>Asesoramiento nutricional y dietético personalizado.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-magic"></i></div>
+                <ul class="especialidad-tagline"><li>Planes alimentarios personalizados.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Cirug%C3%ADa%20Est%C3%A9tica%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Cirugía Estética por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-magic"></i></div>
                 <h3>Cirugía Estética</h3>
-                <p>Procedimientos estéticos y reconstructivos.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-brain"></i></div>
+                <ul class="especialidad-tagline"><li>Evaluación y procedimientos estéticos.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Psicolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Psicología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-brain"></i></div>
                 <h3>Psicología</h3>
-                <p>Salud mental y apoyo psicológico profesional.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-eye"></i></div>
+                <ul class="especialidad-tagline"><li>Acompañamiento en salud mental.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Oftalmolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Oftalmología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-eye"></i></div>
                 <h3>Oftalmología</h3>
-                <p>Cuidado de la visión y salud ocular.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-shield-alt"></i></div>
+                <ul class="especialidad-tagline"><li>Visión y patologías oculares.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Alergia%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Alergia por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-shield-alt"></i></div>
                 <h3>Alergia</h3>
-                <p>Diagnóstico y tratamiento de alergias e inmunología.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-tint"></i></div>
+                <ul class="especialidad-tagline"><li>Alergias e inmunología clínica.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Hematolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Hematología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-tint"></i></div>
                 <h3>Hematología</h3>
-                <p>Especialidad de la sangre y órganos hematopoyéticos.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-ear"></i></div>
+                <ul class="especialidad-tagline"><li>Estudio de la sangre y derivaciones.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Otorrinolaringolog%C3%ADa%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Otorrinolaringología por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-ear"></i></div>
                 <h3>Otorrinolaringología</h3>
-                <p>Salud de oído, nariz y garganta.</p>
-            </div>
-            <div class="especialidad-card">
-                <div class="especialidad-icon"><i class="fas fa-ribbon"></i></div>
+                <ul class="especialidad-tagline"><li>Oído, nariz y garganta.</li></ul>
+            </a>
+            <a class="especialidad-card" href="https://wa.me/5491135998023?text=Hola%2C%20quisiera%20solicitar%20un%20turno%20para%20la%20especialidad%20de%20Oncolog%C3%ADa%20Cl%C3%ADnica%20en%20Centro%20M%C3%A9dico%20Alas.%20Gracias." target="_blank" rel="noopener noreferrer" aria-label="Solicitar turno para Oncología Clínica por WhatsApp">
+                <div class="especialidad-icon" aria-hidden="true"><i class="fas fa-ribbon"></i></div>
                 <h3>Oncología Clínica</h3>
-                <p>Diagnóstico y tratamiento del cáncer.</p>
-            </div>
+                <ul class="especialidad-tagline"><li>Abordaje clínico oncológico coordinado.</li></ul>
+            </a>
         </div>
     </div>
 </section>
@@ -401,8 +435,8 @@
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="index.html#servicios">Servicios</a></li>
                     <li><a href="index.html#noticias">Noticias Médicas</a></li>
-                    <li><a href="index.html#nosotros">Quiénes Somos</a></li>
-                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="quienes-somos.html">Quiénes Somos</a></li>
+                    <li><a href="contactos.html">Contacto</a></li>
                 </ul>
             </div>
             <div class="footer-section">
